@@ -37,6 +37,18 @@ public class ExtendReportOldWays {
         test.addScreenCaptureFromPath("screenshot.png");
     }
 
+
+    @Test
+    public void test3()
+    {
+        ExtentTest test = extent.createTest("MyFirstTest", "Sample description");
+        test.log(Status.INFO, "This step shows usage of log(status, details)");
+        test.info("This step shows usage of info(details)");
+        test.pass("details", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.png").build());
+        test.addScreenCaptureFromPath("screenshot.png");
+    }
+
+
     @AfterSuite
     public void tearDown()
     {
